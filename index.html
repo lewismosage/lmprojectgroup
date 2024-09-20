@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-center {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d3bc0e;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.8); /* Change this to any color */
+        }
+        nav.scrolled a {
+            color: #fff; /* Change this to match the new color scheme */
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-left, .nav-right {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .nav-center {
+                margin: 10px 0;
+            }
+        }
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url(images.lmprojectgroup/hero\ image.jpeg) center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    z-index: 1; /* Ensure hero content stays on top */
+}
+
+/* Dark overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust this for more/less dimming */
+    z-index: -1; /* Place it behind the content */
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2; /* Keep content above the overlay */
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* New button container to wrap buttons */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.primary-btn {
+    background-color: #dde0e3;
+    border: 2px;
+    color: black;
+}
+
+.primary-btn:hover {
+    background-color: white;
+    color: #000;
+}
+
+.secondary-btn {
+    background-color: #dde0e3;
+    border: 2px;
+    color: black;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: #000;
+}
+
+/* Reset default anchor (<a>) styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+         /*What we do section*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Center the h1 heading and add an underline */
+        #what-we-do {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        #what-we-do h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #what-we-do .underline {
+            width: 60px; /* Width of the underline */
+            height: 4px; /* Thickness of the underline */
+            background-color: #d3bc0e; /* Color of the underline */
+            margin: 0 auto; /* Center the underline */
+            margin-top: 10px; /* Space between h1 and underline */
+        }
+
+        /* Grid layout for the cards */
+        .what-we-do-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #333;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0 10px;
+            text-align: center;
+        }
+
+        .card-description {
+            padding: 15px;
+            font-size: 16px;
+            text-align: center;
+            color: #d3d3d3;
+        }
+
+        /*About LM Project Group */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+         /* Center the h1 heading and add an underline for About LM Project Group */
+         #about-lm-project-group {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        #about-lm-project-group h1 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #about-lm-project-group .underline{
+            width: 60px;
+            height: 4px;
+            background-color: #d3bc0e;
+            margin: 0 auto 40px;
+            margin-top: 10px;
+        } 
+        
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            background-color: white;
+        /* flex-wrap: wrap;*/
+        }
+        .container img{
+            max-width: 50%;
+            width: 100%; 
+            height: auto;
+            border-radius: 10px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .container .text {
+            max-width: 45%;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container .reverse {
+            flex-direction: row-reverse;
+        }
+        @media (max-width: 768px){
+            .container{
+                flex-direction: column;
+            }
+            .container img,
+            .container.text{
+                max-width: 100%;
+                width: 100%;
+            }
+            .container.reverse{
+                flex-direction: column;
+            }
+        }
+
+        .container .text p{
+            margin: 0;
+            padding: 20px; 
+            text-align: left;
+            line-height: 1.6;
+        }
+        .container .underline{
+            width: 100%;
+            height: 2px;
+            background-color: #d3bc0e;
+            margin-bottom: 20px; 
+        }
+        .container h2{
+            margin-bottom: 10px;
+            text-align: center;
+        } 
+        /* Blog section */
+       #blog {
+        padding: 50px;
+        text-align: center; /* Center all content inside the blog section */
+       }
+        /* Center the h1 heading and add an underline for About LM Project Group */
+        #blog h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: inline-block; /* Keeps the h1 inline so the underline aligns */
+            text-align: center; /* Specifically center-align the text inside h1 */
+            position: relative;
+        }
+        /* Styling the underline under the heading */
+        #blog .underline {
+            width: 60px;
+            height: 4px;
+            background-color: #d3bc0e;
+            margin: 10px auto 40px; /* Centers the underline */
+        }
+        /* Grid layout for blog posts */
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two blog posts per row */
+            gap: 20px;
+        }
+        /* Styling for each blog post container */
+        .blog-post {
+            background-color: #e2e2e2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        /* Styling for images inside blog posts */
+        .blog-post img {
+            
+            max-width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+        /* Heading styles for blog posts */
+        .blog-post h3 {
+            color: black;
+            margin-top: 15px;
+        }
+        /* Paragraph text styles */
+        .blog-post p {
+            margin-top: 10px;
+            color: #4d4d4d;
+        }
+        /* Date (h6) styling */
+        .blog-post h6 {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin: 0;
+        }
+        /* Styling for the 'Continue Reading' button */
+        .continue-reading {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .continue-reading:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        
+        /* Hide full content by default */
+        .full-content {
+            display: none;
+        }
+
+    /* Footer Section */
+footer {
+  margin-top: 20px;
+  background-color: black;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Align first paragraph (Copyright) to the left */
+footer p:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+
+/* Center the social media links */
+footer a {
+  color: #e0e0e0;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #d3bc0e;
+}
+
+footer .social-links {
+  flex: 1;
+  text-align: center;
+}
+/* Styling for social media icons */
+footer a img {
+  width: 20px; /* Customize width */
+  height: 20px; /* Customize height */
+  border-radius: 50%;
+  margin-right: 5px; /* Space between image and text */
+}
+
+footer a:hover img {
+  filter: brightness(1.2); /* Lighten the image on hover */
+}
+
+/* Align last paragraph (Powered by) to the right */
+footer p:last-of-type {
+  flex: 1;
+  text-align: right;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <!--Navigation bar-->
+    <nav>
+        <div class="nav-left">
+            <a href="">HOME</a>
+            <a href="services.html">SERVICES</a>
+        </div>
+        <div class="nav-center">
+            <h2>LM Project Group</h2>
+        </div>
+        <div class="nav-right">
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact_us.html">CONTACT US</a>
+        </div>
+    </nav>
+
+   <!-- <div class="underline"></div> -->
+    <!--________________________________-->
+    <!--Hero Section-->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experienced Project Management and Business Consulting</h1>
+            <p>Helping you  achieve success!</p>
+            <div class="button-container">
+                <a href="#" class="btn primary-btn">BOOK ONLINE</a>
+                <a href="learn_more.html" class="btn secondary-btn">LEARN MORE</a>
+            </div>
+            <br>
+            
+            <P><h3><p>LM Project Group</p></h3></P>
+        </div>
+    </section>
+    <!--_______________________________-->
+    <!--What We Do Section-->
+    <section id="what-we-do">
+        <h1>What We Do</h1>
+        <div class="underline"></div>
+        <div class="what-we-do-grid">
+            <div class="card">
+                <img src="images.lmprojectgroup/all about you.webp" alt="All About You">
+                <div class="card-title">All About You</div>
+                <div class="card-description">Your business is our business. We're dedicated to turning your aspirations into achievements.
+                    Our team is adept at transforming your vision into reality. Whether you need insightful guidance or hands-on support, 
+                    we're ready to elevate your potential and seize every opportunity.</div>
+            </div>
+            <div class="card">
+                <img src="images.lmprojectgroup/technical stuff.webp" alt="The Technical Stuff">
+                <div class="card-title">The Technical Stuff</div>
+                <div class="card-description">Whether you're just starting out or looking to restructure we've got you covered. Our mantra is: analyze, identify, advise, execute. 
+                    <br>
+                    <br>
+                    LM Project Group is more than a project management firm; we are a team committed to shaping a future where every project is a success story.
+                    Join us on this journey of innovation, integrity, and excellence.</div>
+            </div>
+
+            <div class="card">
+                <img src="images.lmprojectgroup/our expertise.webp" alt="Our Expertise">
+                <div class="card-title">Our Expertise</div>
+                <div class="card-description">We're a group of accountants, analysts, advocates, project managers and strategists that thrive on sharing our experience and knowledge to help you make a success of your business.
+                    Our track record proves that clear communication and expert collaboration will boost your bottom line.</div>
+            </div>
+        </div>
+    </section>
+    <!--_________________________________-->
+    <!--About LM Project Group-->
+    <section id="about-lm-project-group">
+        <h1>About LM Project Group</h1>
+        <div class="underline"></div>
+
+
+        <div class="container">
+            <div class="text">
+                <h2>Our Experience</h2>
+                <div class="underline"></div>
+                <p>After 10 years in the industry, we decided to alter direction. Now, we share our passion by helping others.
+                    Our ramp up process is designed to empower your team and outfit them with the tools they need to succeed. 
+                    Talk to us today about how we can support your growth, limit your turnover, and put you on a solid track to success and profit.</p>
+            </div>
+            <img src="images.lmprojectgroup/ourexperience.webp" alt="">
+        </div>
+
+       
+        <div class="container reverse">
+            <img src="images.lmprojectgroup/our approach.webp" alt="Our Approach">
+            <div class="text">
+                <h2>Our Approach</h2>
+                <div class="underline"></div>
+                <p>Our service includes a comprehensive consult to help identify gaps and opportunities, 
+                    a comprehensive report that includes a project plan with timelines and milestones, a cost analysis, and a schedule. 
+                    We also offer a suite of quality products that will help you get there quickly and smoothly.
+                    That’s how we ensure your success.</p>
+            </div>
+        </div>
+     
+
+        <div class="container">
+            <div class="text">
+                <h2>Why Us?</h2>
+                <div class="underline"></div>
+                <p>Business mentors are key—that’s why when it comes to client selection, we’re choosy. We want to give each of you the time and guidance you deserve. 
+                    Whether you’re seeking a strategic alliance with the right partner or a special skillset or tool, call us today. 
+                    Together we’ll create and refine your plan for success. We didn’t get there alone. And neither will you.</p>
+            </div>
+            <img src="images.lmprojectgroup/why us.webp" alt="Why Us?">
+        </div>
+
+    </section>
+    <!--________________________________-->
+    <!-- Blog Section -->
+  <section id="blog">
+    <h1>Blog</h1>
+    <div class="underline"></div>
+
+    <div class="blog-posts">
+      <div class="blog-post">
+        <h6>24 February 2024</h6>
+        <h3>The Future of Project Management</h3>
+        <img src="images.lmprojectgroup/blogpost.1.webp" alt="blog 1">
+        <p>Navigating Trends in a Changing Landscape</p>
+        <div class="content" id="content-1">
+          <p>In the ever-evolving world of project management, staying ahead of the curve is essential for success.
+            As we find ourselves in a dynamic and fast-paced business environment, project management is no exception to the transformative waves of change.
+            To remain competitive, adaptability and a keen eye on emerging trends are key.
+            In this blog, we will explore the future of project management and how your LM Project Group can navigate the shifting landscape.</p>
+        </div>
+        <div class="full-content" id="full-content-1">
+          <!-- Full content goes here -->
+          <p>1. Embracing Technological Advancements.</p>
+            <p>The integration of cutting-edge technology has become a cornerstone of modern project management. 
+              From AI-driven project management tools to cloud-based collaboration platforms, technology is revolutionizing the way teams work together. 
+              Embrace these tools to enhance efficiency, streamline processes, and deliver results that exceed expectations.</p>
+    
+            <p>2. Agile Methodology.</p>
+            <p>Agile project management has gained significant traction in recent years. 
+              Its iterative and flexible approach allows for quicker response to changing project requirements. 
+              Agile empowers project teams to adapt, collaborate, and deliver in a way that is responsive to client needs and market shifts.</p>
+    
+            <p>3. Sustainability and Environmental Responsibility</p>
+            <p>As the world becomes increasingly environmentally conscious, project management is no exception. 
+              Sustainability is not just a buzzword; it's a driving force behind many projects. 
+              Implementing eco-friendly practices and ensuring responsible resource management are crucial for success in a changing landscape.</p>
+    
+            <p>4. Remote and Hybrid Work Environments</p>
+            <p>The COVID-19 pandemic accelerated the adoption of remote work, and this trend is likely here to stay. 
+              Project management professionals must adapt to leading teams across various locations and time zones.
+              Effective communication and collaboration tools are more vital than ever.</p>
+    
+            <p>5. Data-Driven Decision Making</p>
+            <p>Data analytics and insights play a significant role in project management. 
+              By harnessing the power of data, project managers can make informed decisions, identify trends, and mitigate risks more effectively. 
+              Utilize data-driven approaches to gain a competitive edge.</p>
+    
+            <p>6. Continuous Learning and Skill Development.</p>
+            <p>In a rapidly evolving landscape, the importance of continuous learning cannot be overstated. 
+              Encourage your project management teams to stay up-to-date with the latest methodologies, tools, and best practices.
+              Invest in training and development to keep skills sharp.</p>
+    
+            <p>7. Client-Centric Focus</p>
+            <p>The future of project management is client-centric. Building strong, lasting relationships with clients is a winning strategy. 
+              Understand their needs, expectations, and evolving goals. Tailor your project management approach to provide a personalized experience.</p>
+            
+            <p>8. Adaptability and Resilience</p>
+            <p>Lastly, adaptability and resilience are qualities that will set your LM Project Group apart. The ability to pivot and recover from unexpected challenges is invaluable. 
+              Prepare for the unexpected, and view challenges as opportunities for growth.</p>
+            <br>
+            <p>In conclusion, the future of project management is a thrilling landscape of innovation and transformation. 
+              By embracing technology, adopting agile methodologies, prioritizing sustainability, and focusing on clients, 
+              your LM Project Group can navigate these trends and continue to deliver outstanding results.
+              Stay adaptable, data-driven, and client-focused, and you'll be well-prepared for the exciting journey ahead.
+              The future is bright, and the possibilities are limitless</p>
+          <!-- Add all other paragraphs as necessary -->
+        </div>
+        <a href="#" class="continue-reading" data-target="full-content-1">Continue Reading</a>
+      </div>
+
+      <div class="blog-post">
+        <h6>24 February 2024</h6>
+        <h3>InnovatePM: Exploring the Cutting Edge of Project Management</h3>
+        <img src="images.lmprojectgroup/blogpost2.webp" alt="blog post 2">
+        <p>Welcome to InnovatePM, your go-to source for all things innovative in the world of project management.</p>
+        <p>In this blog, we delve into the dynamic realm where creativity, technology, and strategy intersect to drive project success.
+          Join us as we explore groundbreaking approaches, tools, and trends shaping the future of project management.</p>
+        <div class="content" id="content-2"></div>
+        <div class="full-content" id="full-content-2">
+          <!-- Full content goes here -->
+          <p>1. AI-Powered Project Management:</p>
+              <p>Discover how artificial intelligence is revolutionizing project management by automating repetitive tasks, predicting risks, and optimizing resource allocation.
+                Learn about AI-driven project management tools and their impact on efficiency, accuracy, and decision-making.</p>
+              
+              <p>2. Agile 2.0: </p>
+              <p>Explore the evolution of agile methodologies beyond software development. 
+                Dive into Agile 2.0 principles that emphasize flexibility, collaboration, and continuous improvement across diverse project domains. 
+                Uncover strategies for scaling agile practices to large and complex projects.</p>
+                
+              <p>3. Virtual Collaboration Platforms:</p>
+              <p>With the rise of remote work, virtual collaboration platforms have become indispensable for project teams. 
+                Explore the latest tools and techniques for facilitating seamless communication, document sharing, and real-time collaboration in distributed project environments.</p>
+              
+              <p>4. Sustainability Integration:</p>
+              <p>Discover how sustainability considerations are becoming integral to project management practices. 
+                Explore frameworks for incorporating environmental, social, and economic sustainability goals into project planning, execution, 
+                and evaluation.</p>
+
+              <p>5. Design Thinking in Project Management:</p>
+              <p>Learn how design thinking principles can foster innovation and user-centricity in project management. 
+                Explore methods for empathizing with stakeholders, defining project objectives, ideating creative solutions, 
+                and prototyping project deliverables.</p>
+
+              <p>6. Blockchain for Project Governance:</p>
+              <p>Delve into the potential of blockchain technology to enhance project governance, transparency, and accountability. 
+                Explore use cases for blockchain-based smart contracts, decentralized project management platforms, and immutable project documentation.</p>
+
+              <p>7. Future Trends and Predictions:</p>
+              <p>Gain insights into emerging trends and future directions in the field of project management. 
+                Explore predictions related to the adoption of emerging technologies, shifts in project management methodologies, 
+                and the evolving role of project managers in the digital age.</p>
+              <br>
+
+              <p>Conclusion:</p>
+              <p>InnovatePM is your roadmap to navigating the ever-changing landscape of project management innovation. Stay informed, inspired, and empowered to embrace the future of project management with confidence. 
+                Join us on this exciting journey of exploration, discovery, and transformation.</p>
+          <!-- Add all other paragraphs as necessary -->
+        </div>
+        <a href="#" class="continue-reading" data-target="full-content-2">Continue Reading</a>
+      </div>
+    </div>
+  </section>
+    <!--__________________________________-->
+    <!--Footer Section-->
+    <footer>
+        <p>&copy;Copyright 2024 LM Project Group. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/cjFy3gJWBP5CpYdX/?mibextid=qi2Omg"><img src="images.lmprojectgroup/footerlogos/facebooklogo.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/lmprojectgroup?igsh=dGszOHlvbHU4bTll"><img src="images.lmprojectgroup/footerlogos/instagram.jpg" alt="Instagram"></a>
+          <a href="https://x.com/LMProjectGroup?t=OsEEBujO9WhUKUFVKLRFcw&s=09"><img src="images.lmprojectgroup/footerlogos/x.png" alt="X"></a>
+        </div>
+        <p>Powered by LMPMC</p>
+      </footer>
+      
+    <!--JAVASCRIPT FUNCTIONS-->
+    <!--__________________________________-->
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script> 
+<!--__________________________________-->
+    <!-- JavaScript for "Continue Reading" functionality in the blog section-->
+  <script>
+    document.querySelectorAll('.continue-reading').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const fullContent = document.getElementById(targetId);
+
+        if (fullContent.style.display === 'block') {
+          fullContent.style.display = 'none';
+          this.textContent = 'Continue Reading';
+        } else {
+          fullContent.style.display = 'block';
+          this.textContent = 'Show Less';
+        }
+      });
+    });
+  </script>
+  <!-- JavaScript for smooth scrolling -->
+  <script>
+    document.getElementById("homeLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("home").scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById("contactLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+    <!--__________________________________-->
+</body>
+</html>
