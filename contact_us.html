@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*General*/
+* {
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    padding-top: 80px; /* Adjust padding to account for the height of the navbar */
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    text-align: center;
+}
+/* Navigation Bar */
+nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-center {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .nav-center h2{
+          color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d3bc0e;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.8); /* Change this to any color */
+        }
+        nav.scrolled a {
+            color: #fff; /* Change this to match the new color scheme */
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-left, .nav-right {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .nav-center {
+                margin: 10px 0;
+            }
+        }
+/*Contact Us Section*/
+.underline{
+        width: 60px;
+        height: 4px;
+        background-color: #d3bc0e;
+        margin: 0 auto 40px;
+        margin-top: 10px;
+    } 
+.contact-section {
+    margin-top: 80px; /* Ensure the section starts after the fixed navbar */
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: 80px auto;
+}
+
+  
+/*our services header */
+.our-services {
+    margin-top: 100px; /* Ensure the section starts after the fixed navbar */
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: 80px auto;
+}
+.underline{
+    width: 60px;
+    height: 4px;
+    background-color: #d3bc0e;
+    margin: 0 auto 40px;
+    margin-top: 10px;
+} 
+/* Navigation Bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-left{
+    display: flex;
+    gap: 10px;
+}
+.nav-center{
+    text-align: center;
+    flex-flow: 1;
+}
+.nav-center h2{
+    color: white;
+}
+.nav-right{
+    display: flex;
+    gap: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+nav a:hover{
+    color: #d3bc0e;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+nav.scrolled a{
+    color: #fff;
+}
+@media (max-width: 768px) {
+    nav{
+        flex-direction: column;
+    }
+    nav-left, .nav-right{
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-center{
+        margin: 10px 0;
+    }
+}
+
+/*OUR SERVICES SECTION*/
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    position: relative; /* Allows the button to be absolutely positioned */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Footer Section */
+footer {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  background-color: black;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Align first paragraph (Copyright) to the left */
+footer p:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+
+/* Center the social media links */
+footer a {
+  color: #e0e0e0;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #d3bc0e;
+}
+
+footer .social-links {
+  flex: 1;
+  text-align: center;
+}
+/* Styling for social media icons */
+footer a img {
+  width: 20px; /* Customize width */
+  height: 20px; /* Customize height */
+  border-radius: 50%;
+  margin-right: 5px; /* Space between image and text */
+}
+
+footer a:hover img {
+  filter: brightness(1.2); /* Lighten the image on hover */
+}
+
+/* Align last paragraph (Powered by) to the right */
+footer p:last-of-type {
+  flex: 1;
+  text-align: right;
+}
+
+h2{
+  font: 24px;
+}
+
+
+
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.whatsapp-button {
+    margin: 20px 0;
+}
+
+.whatsapp-button a {
+    display: inline-block;
+    background-color: #036054;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Space between image and text */
+}
+
+.hours {
+    margin-top: 30px;
+}
+
+.hours button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hours button::after {
+    content: " ▼";
+    font-size: 14px;
+}
+
+.hours-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.hours-list li {
+    margin: 5px 0;
+}
+
+/*Subscribe Section */
+
+    .subscribe-container {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #7f7163;
+    }
+
+    .email-input {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .subscribe-btn {
+        width: 300px;
+        padding: 12px;
+        background-color: #e5e4df;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #444;
+        cursor: pointer;
+    }
+
+.subscribe-btn:hover {
+  background-color: #dcdad6;
+}
+
+/*Reviews Section*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.hero-review-section {
+position: relative;
+background: url(images.lmprojectgroup/reviews.jpeg) no-repeat center center/cover;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.hero-review-content {
+
+padding: 20px;
+text-align: center;
+color: white;
+}
+
+.hero-review-content h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+}
+
+.hero-review-content p {
+font-size: 1.5rem;
+background: rgba(0, 0, 0, 0.5);
+color: white;
+}
+
+    /* Footer Section */
+footer {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  background-color: black;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Align first paragraph (Copyright) to the left */
+footer p:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+
+/* Center the social media links */
+footer a {
+  color: #e0e0e0;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #d3bc0e;
+}
+
+footer .social-links {
+  flex: 1;
+  text-align: center;
+}
+/* Styling for social media icons */
+footer a img {
+  width: 20px; /* Customize width */
+  height: 20px; /* Customize height */
+  border-radius: 50%;
+  margin-right: 5px; /* Space between image and text */
+}
+
+footer a:hover img {
+  filter: brightness(1.2); /* Lighten the image on hover */
+}
+
+/* Align last paragraph (Powered by) to the right */
+footer p:last-of-type {
+  flex: 1;
+  text-align: right;
+}
+    </style>
+<body>
+  <!--Navigation bar-->
+  <nav>
+    <div class="nav-left">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+    </div>
+    <div class="nav-center">
+        <h2>LM Project Group</h2>
+    </div>
+    <div class="nav-right">
+        <a href="gallery.html">GALLERY</a>
+        <a href="">CONTACT US</a>
+    </div>
+</nav>
+    <div><h1>Contact Us</h1>
+        <div class="underline"></div>
+      </div>
+    
+    
+      <div class="contact-section">
+        <h2>Better yet, see us in person!</h2>
+        <p>We love our customers, so feel free to visit during normal business hours.</p>
+    
+        <div class="whatsapp-button">
+          <a href="https://wa.me/254793052198" target="_blank">
+            <img src="images.lmprojectgroup/footerlogos/whatsapp.logo.png" alt="WhatsApp"> <!-- WhatsApp PNG image -->
+            Message us on WhatsApp
+          </a>
+        </div>
+    
+        <div class="company-info">
+          <p><strong>LM Project Group</strong></p>
+          <p>Phone Contact: +254793052198</p>
+          <p>Email Address: lmprojectmanagementgroup@gmail.com</p>
+        </div>
+    
+        <div class="hours">
+          <button onclick="toggleHours()">Hours</button>
+          <ul class="hours-list" id="hours-list">
+            <li>Mon: 09:00 - 17:00</li>
+            <li>Tue: 09:00 - 17:00</li>
+            <li>Wed: 09:00 - 17:00</li>
+            <li>Thu: 09:00 - 17:00</li>
+            <li>Fri: 09:00 - 17:00</li>
+            <li>Sat: 10:00 - 14:00</li>
+            <li>Sun: Closed</li>
+          </ul>
+        </div>
+    
+        <button id="showFormButton">Drop us a line</button>
+    
+        <div id="contactForm" style="display: none;">
+          <form action="/submit-form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"><br><br>
+    
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea><br><br>
+    
+            <button type="submit">Send</button>
+            <button type="button">Cancel</button>
+          </form>
+        </div>
+    
+      </div>
+      <section class="hero-review-section">
+        <div class="hero-review-content">
+            <h1>Reviews</h1>
+            <p>Reviews coming soon!</p>
+        </div>
+      </section>
+      
+      <div class="subscribe-container">
+        <h2>Subscribe</h2>
+        <input type="email" class="email-input" placeholder="Email Address">
+        <br>
+        <button class="subscribe-btn">SIGN UP</button>
+    </div>
+    <!--Footer Section-->
+    <footer>
+      <p>&copy;Copyright 2024 LM Project Group. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/cjFy3gJWBP5CpYdX/?mibextid=qi2Omg"><img src="images.lmprojectgroup/footerlogos/facebooklogo.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/lmprojectgroup?igsh=dGszOHlvbHU4bTll"><img src="images.lmprojectgroup/footerlogos/instagram.jpg" alt="Instagram"></a>
+        <a href="https://x.com/LMProjectGroup?t=OsEEBujO9WhUKUFVKLRFcw&s=09"><img src="images.lmprojectgroup/footerlogos/x.png" alt="X"></a>
+      </div>
+      <p>Powered by LMPMC</p>
+    </footer>
+    <script src="lmprojectgroup_script.js"></script>
+</body>
+</html>

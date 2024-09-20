@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*General*/
+        * {
+           margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        body {
+            padding-top: 80px; /* Adjust padding to account for the height of the navbar */
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: white;
+        }
+          
+        /*our services header */
+        .gallery_header {
+            margin-top: 100px; /* Ensure the section starts after the fixed navbar */
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin: 80px auto;
+            color: white;
+        }
+        .underline{
+            width: 60px;
+            height: 4px;
+            background-color: #d3bc0e;
+            margin: 0 auto 40px;
+            margin-top: 10px;
+        } 
+        /* Navigation Bar */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-left{
+            display: flex;
+            gap: 10px;
+        }
+        .nav-center{
+            text-align: center;
+            flex-flow: 1;
+        }
+        .nav-center h2{
+            color: white;
+        }
+        .nav-right{
+            display: flex;
+            gap: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover{
+            color: #d3bc0e;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        nav.scrolled a{
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            nav{
+                flex-direction: column;
+            }
+            nav-left, .nav-right{
+                justify-content: center;
+                gap: 10px;
+            }
+            .nav-center{
+                margin: 10px 0;
+            }
+        }
+
+/*Gallery Section */
+
+        .gallery{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery-item{
+            margin-bottom: 40px;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px; 
+            margin-bottom: 10px;
+       }
+       .image-container img{
+        width: 45%;
+        max-width: 400px;
+        height: auto;
+        box-shadow: 0 40px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+       }
+       .image-container img:hover{
+        transform: scale(1.05);
+       }
+       .description{
+        font-size: 1.2rem;
+        color: white;
+       }
+       /* Responsiveness */
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+/* Footer Section */
+footer {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  background-color: black;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Align first paragraph (Copyright) to the left */
+footer p:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+
+/* Center the social media links */
+footer a {
+  color: #e0e0e0;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #d3bc0e;
+}
+
+footer .social-links {
+  flex: 1;
+  text-align: center;
+}
+/* Styling for social media icons */
+footer a img {
+  width: 20px; /* Customize width */
+  height: 20px; /* Customize height */
+  border-radius: 50%;
+  margin-right: 5px; /* Space between image and text */
+}
+
+footer a:hover img {
+  filter: brightness(1.2); /* Lighten the image on hover */
+}
+
+/* Align last paragraph (Powered by) to the right */
+footer p:last-of-type {
+  flex: 1;
+  text-align: right;
+}
+
+</style>
+</head>
+<body>
+     <!--Navigation bar-->
+     <nav>
+        <div class="nav-left">
+            <a href="index.html">HOME</a>
+            <a href="services.html">SERVICES</a>
+        </div>
+        <div class="nav-center">
+            <h2>LM Project Group</h2>
+        </div>
+        <div class="nav-right">
+            <a href="">GALLERY</a>
+            <a href="contact_us.html">CONTACT US</a>
+        </div>
+    </nav>
+
+    <div><h1>Inspiring Success: A Gallery of Our Clients' Achievements</h1>
+        <div class="underline"></div>
+      </div>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <div><h4>Project 1</h4></div>
+            <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/project1before.webp" alt="Before - Project 1">
+                <img src="images.lmprojectgroup/project1after.webp" alt="After -Project 1">
+            </div>
+            <p class="description">Our day was made when this happy customer drove away with a grin from ear to ear in their car, 
+                transformed into a sleek new look by our team. We're all about delivering smiles and exceeding expectations. 
+                Safe travels on your stylish new journey! </p>
+        </div>
+
+        <div class="gallery-item">
+            <div><h4>Project 2.</h4></div>
+            <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/const.project2.webp" alt="before - project 2">
+                <img src="images.lmprojectgroup/const.project2.after.webp" alt="after - project 2">
+            </div>
+            <p class="description">Here's a sneak peek of what we've achieved – a project nearly complete, standing tall at 80% done. 
+                We're turning dreams into reality, one milestone at a time.</p>
+        </div>
+
+        <div class="gallery-item"></div>
+        <div><h4>Project 3.</h4></div>
+        <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/constproject3.webp" alt="before - project 3">
+               
+            </div>
+            <p class="description">In the world of project construction management, we orchestrate dreams into reality, 
+                one brick at a time, as a magnificent building rises from the ground.</p>
+        </div>
+
+        <div class="gallery-item"></div>
+        <div><h4>Project 4.</h4></div>
+        <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/project4.webp" alt="before - project 4">
+                <img src="images.lmprojectgroup/project4.after.webp" alt="after - project 4">
+            </div>
+            <p class="description">From rust to riches! This project car has undergone an incredible transformation. 
+                With a fresh coat of paint, sleek new lines, and a heart full of history, it's now ready to hit the road in style.</p>
+        </div>
+
+        <div class="gallery-item"></div>
+        <div><h4>Project 5.</h4></div>
+        <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/constproject5.webp" alt="before - project 5">
+            </div>
+            <p class="description">Step into the future with LM Project Group – where dreams take shape and innovation meets craftsmanship. 
+                Our latest masterpiece, a home 90% complete, showcases the pinnacle of construction excellence. 
+                Explore the journey of precision and dedication as we redefine construction project management. 
+                Your vision, our expertise – building tomorrow together</p>
+        </div>
+
+        <div class="gallery-item"></div>
+        <div><h4>Project 6.</h4></div>
+        <br>
+            <div class="image-container">
+                <img src="images.lmprojectgroup/farm.project6.webp" alt="before - project 6">
+            </div>
+            <p class="description">LM Project Group has worked their magic on this lush agricultural land, and it's now a thriving bean paradise. 
+                The fields stretch as far as the eye can see, a testament to our dedication and expertise. 
+                Fresh, sustainable, and full of beans, it's a true testament to their commitment to agriculture.</p>
+        </div>
+    </section>
+
+      <!--Footer Section-->
+      <footer>
+        <p>&copy;Copyright 2024 LM Project Group. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/cjFy3gJWBP5CpYdX/?mibextid=qi2Omg"><img src="images.lmprojectgroup/footerlogos/facebooklogo.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/lmprojectgroup?igsh=dGszOHlvbHU4bTll"><img src="images.lmprojectgroup/footerlogos/instagram.jpg" alt="Instagram"></a>
+          <a href="https://x.com/LMProjectGroup?t=OsEEBujO9WhUKUFVKLRFcw&s=09"><img src="images.lmprojectgroup/footerlogos/x.png" alt="X"></a>
+        </div>
+        <p>Powered by LMPMC</p>
+      </footer>
+
+      <script src="lmprojectgroup_script.js"></script>
+
+
+</body>
+</html>
